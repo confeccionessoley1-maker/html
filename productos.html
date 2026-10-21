@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Confecciones Soley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+       
+        <div class="header-izq">
+            <img src="imagenes/logo.jpg" alt="Logo Confecciones Soley" class="logo-header">
+
+        <div class="header-izq">
+
+            <div class="textos-header">
+                
+                
+                <img src="imagenes/icono titulo.png" alt="Confecciones Soley" class="imagen-titulo">
+                
+                <p>Hecho con dedicación, creado para ti</p>
+            </div>
+        </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos & Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="carrito.html" class="nav-carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="imagenes/productos.png" alt="Nosotros" class="titulo2-imagen">
+            <p style="text-align: center; margin-bottom: 20px;">Ofrecemos desde productos y ajustes exprés, hasta la confección de vestidos a medida.</p>
+            
+            <div class="grid-container">
+                
+               <div class="card">
+                    <img src="imagenes/gorro unidad.jpeg" class="img-producto">
+                    <h3>Gorro (de satín)</h3>
+                    <p>Protege tu cabello mientras duermes. Adiós al frizz y al quiebre con nuestro gorro de satín</p>
+                    <p><strong>$20,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p1" data-nombre="Gorro (de satín)" data-precio="20000">Añadir al Carrito</button>
+                </div>
+                
+                
+                <div class="card">
+                    <img src="imagenes/gorro unidad.jpeg" class="img-producto">
+                    <h3>Gorro x docena</h3>
+                    <p>Ideal para surtir tu negocio o emprender. Lleva nuestro gorro estrella al mejor precio mayorista.</p>
+                    <p><strong>$168,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p2" data-nombre="Gorro x docena" data-precio="168000">Añadir al Carrito</button>
+                </div>
+                
+               
+                <div class="card">
+                    <img src="imagenes/moñas.jpeg" class="img-producto">
+                    <h3>Moñas (Scrunchies de satín)</h3>
+                    <p>Sujeta tu cabello con estilo sin dejar marcas ni maltratarlo. El accesorio que no te puede faltar.</p>
+                    <p><strong>$4,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p3" data-nombre="Moñas (Scrunchies de satín)" data-precio="4000">Añadir al Carrito</button>
+                </div>
+                <div class="card">
+                    <img src="imagenes/moñas.jpeg" class="img-producto">
+                    <h3>Moñas x docena</h3>
+                    <p>Variedad de colores para tu negocio o para combinar todos los días. Excelente rentabilidad al por mayor.</p>
+                    <p><strong>$26,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p4" data-nombre="Moñas x docena" data-precio="26000">Añadir al Carrito</button>
+                </div>
+                <div class="card">
+                    <img src="imagenes/toalla.jpeg" class="img-producto">
+                    <h3>Toalla cabello microfibra</h3>
+                    <p>Seca tu cabello más rápido, reduce el frizz y evita el daño causado por toallas tradicionales.</p>
+                    <p><strong>$16,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p5" data-nombre="Toalla cabello microfibra" data-precio="16000">Añadir al Carrito</button>
+                </div>
+                                <div class="card">
+                    <img src="imagenes/toalla.jpeg" class="img-producto">
+                    <h3>Toalla cabello microfibra x docena</h3>
+                    <p>El producto que toda rutina de belleza necesita. Multiplica tus ventas con este imperdible al por mayor.</p>
+                    <p><strong>$108,000 COP</strong></p>
+                    <button class="btn btn-agregar" data-id="p6" data-nombre="Toalla cabello microfibra x docena" data-precio="108000">Añadir al Carrito</button>
+                </div>
+                
+                <div class="card">
+                    
+                    <img src="imagenes/dobladillo.jpg" class="img-producto" alt="Vestido de Noche Personalizado">
+                    
+                    <h3>Servicios</h3>
+                    <p>Confección completa según diseño del cliente.</p>
+                    
+                    
+                    <p><strong>Precio bajo cotización</strong></p>
+                    
+                   
+                    <a href="https://wa.me/573143103466?text=¡Hola%20Soley!%20Me%20gustaría%20cotizar%20el%20servicio%20de%20*Vestido%20de%20Noche%20Personalizado*.%20Te%20cuento%20mi%20idea:%20" target="_blank" class="btn" style="display: block; text-decoration: none;">Cotizar por WhatsApp 💬</a>
+                </div>
+
+
+                
+            </div>
+        </section>
+    </main>
+
+     <a href="https://wa.me/573143103466" class="whatsapp-flotante" target="_blank" title="Contáctanos por WhatsApp">
+        <img src="imagenes/icono whatsapp.png" >
+    </a>
+    <a href="#" class="btn-subir" title="Volver arriba">⬆</a>
+    <footer>
+        <p>&copy; 2026 Confecciones Soley. Hecho con dedicación, creado para ti.</p>
+    </footer>
+
+
+    <script src="carrito.js"></script>
+    <script src="formulario.js"></script>
+    <div id="ai-chatbot" class="ai-chatbot">
+        <div class="ai-header" onclick="toggleChat()">
+            <span>🤖 Asistente Soley AI</span>
+            <span id="ai-toggle-icon">▲</span>
+        </div>
+        <div class="ai-body" id="ai-body" style="display: none;">
+            <div class="ai-messages" id="ai-messages">
+                <p class="ai-msg-bot">¡Hola! Soy la inteligencia artificial de Soley. ¿En qué te puedo ayudar sobre nuestros productos o servicios?</p>
+            </div>
+            <div class="ai-footer">
+                <input type="text" id="ai-input" placeholder="Escribe tu duda..." onkeypress="manejarEnterAI(event)">
+                <button onclick="enviarMensajeAI()" class="btn" style="padding: 8px 12px; margin-top: 0; border-radius: 5px;">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

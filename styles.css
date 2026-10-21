@@ -1,0 +1,800 @@
+:root {
+    --color-fondo: #FFE5E0;
+    --color-principal: #c8938a;
+    --color-principal-oscuro: #b07c73; 
+    --color-texto: #5a4b46;
+    --color-blanco: #ffffff;
+    --color-borde: #ebd8d4; 
+    --fuente-titulos: 'Georgia', 'Times New Roman', serif; 
+    --fuente-texto: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('imagenes/fondo.avif'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: normal;
+    color: var(--color-texto);
+    margin-bottom: 15px;
+}
+
+header {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('imagenes/fondo\ menu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--color-borde);
+    box-shadow: 0 4px 15px rgba(200, 147, 138, 0.2);
+}
+
+.header-izq {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-header {
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--color-principal);
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(200, 147, 138, 0.2);
+}
+
+.textos-header {
+    text-align: left;
+}
+
+.textos-header h1 {
+    font-size: 2rem;
+    color: var(--color-principal);
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+}
+
+.textos-header p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--color-texto);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-principal);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-principal);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(90, 75, 70, 0.05);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after {
+    content: '♥';
+    display: block;
+    font-size: 1rem;
+    color: var(--color-principal);
+    margin-top: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(200, 147, 138, 0.2);
+}
+
+.card h3 {
+    color: var(--color-principal);
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--color-principal-oscuro);
+    transform: scale(1.02);
+}
+
+details {
+    background: var(--color-fondo);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+details:hover {
+    background: var(--color-borde);
+}
+
+details summary {
+    font-weight: bold;
+    outline: none;
+    color: var(--color-texto);
+    font-size: 1.1rem;
+}
+
+details p {
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 2px solid var(--color-principal);
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.cart-table th {
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    font-family: var(--fuente-titulos);
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.cart-table th, .cart-table td {
+    border-bottom: 1px solid var(--color-borde);
+    padding: 15px;
+    text-align: center;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.5rem;
+    font-family: var(--fuente-titulos);
+    color: var(--color-principal);
+    padding: 20px 0;
+    border-top: 2px solid var(--color-borde);
+}
+
+.btn-cantidad {
+    background-color: var(--color-borde);
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color-texto);
+    transition: background-color 0.3s;
+}
+
+.btn-cantidad:hover {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-decoration: none;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    border-top: 2px solid var(--color-borde);
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.logo-animado {
+    width: 130px; 
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--color-principal);
+    box-shadow: 0 5px 15px rgba(200, 147, 138, 0.3);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo-animado:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(200, 147, 138, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+.btn-subir {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+.btn-subir:hover {
+    background-color: var(--color-principal-oscuro);
+    transform: translateY(-5px);
+}
+
+@keyframes pulseEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulseEffect 2s infinite;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-principal);
+}
+
+.detalle-animado:hover {
+    transform: translateX(5px);
+}
+
+.texto-central {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: var(--color-texto);
+}
+
+.cajitas-nosotros {
+    margin-top: 20px;
+}
+
+.icono-cajita {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icono-cajita {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.icono-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+    border: 2px solid var(--color-borde);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(200, 147, 138, 0.1);
+}
+
+.icono-red:hover {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border-color: var(--color-principal);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(200, 147, 138, 0.3);
+}
+.imagen-titulo {
+    width: 220px;
+    max-width: 100%; /* Agregado para que se adapte */
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.titulo-imagen {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 100%; /* Magia para celulares */
+    max-width: 250px;
+    height: auto;
+    position: relative;
+}
+
+.titulo2-imagen {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 100%; /* Magia para celulares */
+    max-width: 650px;
+    height: auto;
+    position: relative;
+}
+
+.titulo3-imagen {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 100%; /* Magia para celulares */
+    max-width: 500px;
+    height: auto;
+    position: relative;
+}
+
+.formulario-soley {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(200, 147, 138, 0.15);
+    border: 1px solid var(--color-borde);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.grupo-input label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.grupo-input input,
+.grupo-input select,
+.grupo-input textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--color-borde);
+    border-radius: 8px;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    transition: border-color 0.3s ease;
+}
+
+.grupo-input input:focus,
+.grupo-input select:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    background-color: var(--color-blanco);
+}
+
+.btn-formulario {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+.img-producto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(200, 147, 138, 0.15);
+}
+
+.img-galeria {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+#galeria .card,
+.img-galeria {
+    padding: 0;
+    overflow: hidden;
+}
+/* =========================================
+   ADAPTACIÓN PARA CELULARES (RESPONSIVE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Reducimos márgenes para aprovechar el espacio en pantalla chica */
+    main {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    /* 2. Centramos la cabecera y el logo */
+    header {
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .header-izq {
+        flex-direction: column; /* Pone el logo arriba del título */
+        text-align: center;
+    }
+
+    /* 3. Ponemos el menú en lista vertical si no cabe */
+    nav ul {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* 4. ¡LO MÁS IMPORTANTE! Productos y Galería a una sola columna */
+    .grid-container {
+        grid-template-columns: 1fr; /* Esto hace que las tarjetas se pongan una debajo de otra */
+    }
+}
+/* =========================================
+   CARRITO RESPONSIVE (Celulares)
+   ========================================= */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Permite hacer scroll horizontal si la tabla es muy ancha */
+    -webkit-overflow-scrolling: touch; /* Hace que el deslizamiento en celulares se sienta suave */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .cart-table {
+        min-width: 600px; /* Obliga a la tabla a mantener un tamaño donde se lea bien el texto */
+    }
+}
+
+/* =========================================
+   CARRUSEL
+   ========================================= */
+.carrusel-contenedor {
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(200, 147, 138, 0.2);
+}
+.carrusel-slide {
+    display: none;
+}
+.carrusel-slide.activa {
+    display: block;
+}
+.img-carrusel {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(176, 124, 115, 0.5);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: var(--color-principal-oscuro);
+}
+
+/* =========================================
+   ASISTENTE AI
+   ========================================= */
+.ai-chatbot {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Ubicado a la izquierda para no estorbar a WhatsApp */
+    width: 300px;
+    background: var(--color-blanco);
+    border: 2px solid var(--color-principal);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(90, 75, 70, 0.15);
+    z-index: 1000;
+    font-family: var(--fuente-texto);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.ai-header {
+    background: var(--color-principal);
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ai-body {
+    display: flex;
+    flex-direction: column;
+}
+.ai-messages {
+    height: 250px;
+    padding: 15px;
+    overflow-y: auto;
+    background: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ai-msg-bot, .ai-msg-user {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    max-width: 85%;
+}
+.ai-msg-bot {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    align-self: flex-start;
+}
+.ai-msg-user {
+    background: var(--color-principal-oscuro);
+    color: white;
+    align-self: flex-end;
+}
+.ai-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid var(--color-borde);
+    background: var(--color-blanco);
+    gap: 5px;
+}
+.ai-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    outline: none;
+}
+.ai-footer input:focus {
+    border-color: var(--color-principal);
+}
+
+@media (max-width: 768px) {
+    .img-carrusel { height: 250px; }
+    .ai-chatbot { width: 90%; left: 5%; bottom: 70px; }
+}
+.galeria-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+.galeria-item img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+.galeria-item {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.galeria-item:hover {
+    box-shadow: 0 15px 30px rgba(200, 147, 138, 0.3); /* Usa el color de tu marca */
+    transform: translateY(-6px);
+}
+/* Cambiar el color de las cajitas en la sección Nosotros */
+#nosotros .card {
+    background-color: #F8E5E2; /* Aquí pones el color de fondo que desees */
+    border: 1px solid #D6A8A1; /* Opcional: un borde para que resalte */
+    color: #333333; /* Color del texto dentro de la cajita */
+}
+#nosotros .card:hover {
+    background-color: #EBB6B0; /* Color al pasar el mouse */
+    color: #000000; /* Color del texto al pasar el mouse */
+}
+/* Cambiar el color de las cajitas en Tendencias y Consejos */
+/* Cajitas de la sección Tendencias/Blog */
+#blog .card {
+    background-color: #F8E5E2 !important;
+    border: 1px solid #D6A8A1 !important;
+    color: #333333 !important;
+}
+
+/* Efecto hover al pasar el mouse */
+#blog .card:hover {
+    background-color: #EBB6B0 !important;
+    color: #000000 !important;
+}
+.card {
+    overflow: hidden; /* Esconde cualquier pedazo de foto que se salga de la tarjeta */
+    /* Si las tarjetas siguen variando de tamaño, agrégales un alto fijo aquí, por ejemplo: height: 300px; */
+}
+
+.img-galeria {
+    width: 100%;
+    height: 300px; /* Fuerza a que todas las imágenes midan lo mismo de alto */
+    object-fit: cover; /* Esta es la magia: hace que la foto llene el espacio recortando los bordes sin estirarse ni aplastarse */
+    display: block;
+}
+/* Contenedor principal de los videos */
+#carrusel-videos .carrusel-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Ajuste específico para cada video */
+.carrusel-slide-vid video {
+    width: 100%;
+    max-height: 500px; /* Evita que el video sea demasiado alto en escritorio */
+    object-fit: cover; /* Llena el espacio sin deformar el video (puedes cambiarlo a 'contain' si se recorta mucho) */
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(200, 147, 138, 0.2);
+    background-color: #000; /* Fondo negro en caso de que el video tenga formato vertical */
+}
+
+/* Animación de transición suave (si no la tienes ya para las imágenes) */
+.fade {
+    animation-name: fadeAnim;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeAnim {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}

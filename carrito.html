@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Confecciones Soley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        
+        <div class="header-izq">
+            <img src="imagenes/logo.jpg" alt="Logo Confecciones Soley" class="logo-header">
+
+            <div class="textos-header">
+                
+            
+                <img src="imagenes/icono titulo.png" alt="Confecciones Soley" class="imagen-titulo">
+                
+                <p>Hecho con dedicación, creado para ti</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos & Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="carrito.html" class="nav-carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="imagenes/carrito.png" alt="Nosotros" class="titulo2-imagen">
+            
+            <div class="table-responsive">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Producto/Servicio</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-carrito">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-total">
+                <p id="total-carrito">Total a Pagar: $0 COP</p>
+               
+                <button class="btn" style="background-color: #b07c73; font-size: 1.1rem; margin-top: 15px;" onclick="enviarPedidoWhatsApp()">
+                    Confirmar Pedido vía WhatsApp 
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Confecciones Soley. Hecho con dedicación, creado para ti.</p>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

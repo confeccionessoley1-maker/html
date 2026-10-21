@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Confecciones Soley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+       
+        <div class="header-izq">
+            <img src="imagenes/logo.jpg" alt="Logo Confecciones Soley" class="logo-header">
+
+        <div class="header-izq">
+
+            <div class="textos-header">
+                
+                
+                <img src="imagenes/icono titulo.png" alt="Confecciones Soley" class="imagen-titulo">
+                
+                <p>Hecho con dedicación, creado para ti</p>
+            </div>
+        </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos & Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="carrito.html" class="nav-carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="imagenes/galeria.png" alt="Nosotros" class="titulo3-imagen">
+            <p style="text-align: center; margin-bottom: 20px;">Explora algunas de nuestras piezas, arreglos realizados con dedicación y exclusivas creaciones a medida, cotizadas y diseñadas especialmente para ti.</p>
+            
+<div class="grid-container">
+             
+                <div class="card">
+                    <img src="imagenes/galeria 1.jpeg"  class="img-galeria">
+                </div>
+                
+           
+                <div class="card">
+                    <img src="imagenes/galeria 2.jpeg"  class="img-galeria">
+                </div>
+                
+                
+                <div class="card">
+                    <img src="imagenes/galeria 3.jpeg"  class="img-galeria">
+                </div>
+                
+                
+                <div class="card">
+                    <img src="imagenes/galeria 4.jpeg"  class="img-galeria">
+                </div>
+                                <div class="card">
+                    <img src="imagenes/galeria 34.jpeg" class="img-galeria">
+                </div>
+                
+         
+                <div class="card">
+                    <img src="imagenes/galeria 5.jpeg"  class="img-galeria">
+                </div>
+                
+           
+                <div class="card">
+                    <img src="imagenes/galeria 6.jpg"  class="img-galeria">
+                </div>
+                
+                <div class="card">
+                    <img src="imagenes/galeria 7.jpg"  class="img-galeria">
+                </div>
+                
+                <div class="card">
+                    <img src="imagenes/galeria 8.jpg"  class="img-galeria">
+                </div>
+
+                <div class="card">
+                    <img src="imagenes/galeria 9.jpg"  class="img-galeria">
+                </div>
+
+                <div class="card">
+                    <img src="imagenes/galeria 10.jpeg"  class="img-galeria">
+                </div>
+                
+                <div class="card">
+                     <img src="imagenes/galeria 11.jpeg"  class="img-galeria">
+                </div>
+                
+                <div class="card">
+                    <img src="imagenes/galeria 12.jpeg"  class="img-galeria">
+                </div>
+
+                <div class="card">
+                    <img src="imagenes/galeria13.jpeg"  class="img-galeria">
+                </div>
+
+                <div class="card">
+                    <img src="imagenes/galeria 14.jpeg"  class="img-galeria">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/573143103466" class="whatsapp-flotante" target="_blank" title="Contáctanos por WhatsApp">
+        <img src="imagenes/icono whatsapp.png" >
+    </a>
+    <a href="#" class="btn-subir" title="Volver arriba">⬆</a>
+    <footer>
+        <p>&copy; 2026 Confecciones Soley. Hecho con dedicación, creado para ti.</p>
+    </footer>
+
+
+    <script src="carrito.js"></script>
+    <script src="formulario.js"></script>
+    <div id="ai-chatbot" class="ai-chatbot">
+        <div class="ai-header" onclick="toggleChat()">
+            <span>🤖 Asistente Soley AI</span>
+            <span id="ai-toggle-icon">▲</span>
+        </div>
+        <div class="ai-body" id="ai-body" style="display: none;">
+            <div class="ai-messages" id="ai-messages">
+                <p class="ai-msg-bot">¡Hola! Soy la inteligencia artificial de Soley. ¿En qué te puedo ayudar sobre nuestros productos o servicios?</p>
+            </div>
+            <div class="ai-footer">
+                <input type="text" id="ai-input" placeholder="Escribe tu duda..." onkeypress="manejarEnterAI(event)">
+                <button onclick="enviarMensajeAI()" class="btn" style="padding: 8px 12px; margin-top: 0; border-radius: 5px;">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
